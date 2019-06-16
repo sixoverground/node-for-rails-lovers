@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h2 Articles
+  
+  a(href='/articles/new') New article
+  
+  each myArticle in articles
+    article
+      a(href=`/articles/${myArticle.id}`)
+        h2= myArticle.title
+      div= myArticle.text
+      form(method='post' action=`/articles/${myArticle.id}`)
+        input(type='hidden' name='_method' value='delete')
+        button Delete

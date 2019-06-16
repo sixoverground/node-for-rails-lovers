@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h2 New article
+
+  form(method='post' action='/articles')
+    p
+      label(for='title') Title
+      input(type='text' id='title' name='title')
+
+    p
+      label(for='text') Text
+      textarea(id='text' name='text')
+    
+    button(type='submit') Save
+    a(href='/articles') Cancel

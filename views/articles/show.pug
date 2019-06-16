@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  a(href='/articles') Articles
+
+  h2= article.title
+  div= article.text
+  
+  a(href=`/articles/${article.id}/edit`) Edit

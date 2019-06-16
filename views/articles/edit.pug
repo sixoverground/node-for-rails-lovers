@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h2= `Edit ${article.title}`
+
+  form(method='post' action=`/articles/${article.id}`)
+    input(type='hidden' name='_method' value='patch')
+
+    p
+      label(for='title') Title
+      input(type='text' id='title' name='title' value=article.title)
+
+    p
+      label(for='text') Text
+      textarea(id='text' name='text')= article.text
+    
+    button(type='submit') Save
+    a(href=`/articles/${article.id}`) Cancel

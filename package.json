@@ -14,7 +14,7 @@
     "method-override": "^3.0.0",
     "objection": "^1.6.9",
     "pg": "^7.11.0",
-    "pug": "^2.0.3"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "jest": "^24.9.0",
